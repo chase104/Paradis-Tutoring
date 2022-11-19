@@ -1,7 +1,7 @@
 <script>
     // Optional: Function to scroll to the about section
     function scrollToServices() {
-      const aboutSection = document.querySelector('#about');
+      const aboutSection = document.querySelector('#services');
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
