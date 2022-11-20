@@ -1,0 +1,19 @@
+{
+  "name": "paradis_tutoring",
+  "version": "1.0.0",
+  "description": "Tutoring Website For Matt Paradis",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chase Van Halen",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-serve": "^1.1.1",
+    "svelte": "^3.44.3"
+  }
+}
