@@ -1,15 +1,21 @@
 <script>
-    let name = 'World';
+  import Header from "./components/Header.svelte";
+  import Services from "./components/Services.svelte";
+
   </script>
   
   <main>
-    <h1>Hello {name}! Nice to meet you!</h1>
+    <Header />
+    <Services />
   </main>
   
   <style>
     main {
-      text-align: center;
-      padding: 50px;
-      font-family: Arial, sans-serif;
+
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
   </style>

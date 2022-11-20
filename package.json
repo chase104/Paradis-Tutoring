@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-url": "^8.0.1",
     "rollup": "^2.70.1",
     "rollup-plugin-serve": "^1.1.1",
     "svelte": "^3.44.3"

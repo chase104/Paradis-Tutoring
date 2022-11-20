@@ -6,6 +6,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import css from "rollup-plugin-css-only";
+import url from "@rollup/plugin-url";
 const production = process.env.NODE_ENV === "production";
 
 export default {
@@ -29,6 +30,11 @@ export default {
       dedupe: ["svelte"],
     }),
     commonjs(),
+    url({
+      // include jpg
+      include: ["**/*.jpg", "**/*.jpeg", "**/*.png", "**/*.svg"],
+      limit: Infinity,
+    }),
 
     !production &&
       serve({
