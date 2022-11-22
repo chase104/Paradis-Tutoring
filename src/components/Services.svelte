@@ -3,16 +3,18 @@
     import { getContext } from 'svelte';
     const services = getContext('services');
     import {clickedTopic} from '../store.js';
-    $: console.log(clickedTopic);
     function scrollToContact() {
       const aboutSection = document.querySelector('#contact');
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
     let handleTypeClick = (type) => {
-        console.log("setting type");
         clickedTopic.set(type);
     }
-
+    function handleKeyPress(event) {
+    if (event.key === 'Enter' || event.key === 'Space') {
+      handleTypeClick(event.target.innerText);
+    }
+}
 </script>
 
 
@@ -22,15 +24,15 @@
     <div class="lists-container">
 
     {#each services as service}
-        <div class="individual-list" on:click={() => scrollToContact()}>
+        <section class="individual-list" on:click={() => scrollToContact()}>
             <h3>{service.type}</h3>
             <ul class="services-list">
                 {#each service.types as type}
-                    <li on:click={() => handleTypeClick(type)}>{type}</li>
+                    <li on:click={() => handleTypeClick(type)} on:keypress={handleKeyPress}>{type}</li>
                 {/each}
             </ul>
 
-        </div>
+        </section>
     {/each}
 </div>
 

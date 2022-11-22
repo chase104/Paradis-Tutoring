@@ -1,15 +1,20 @@
 <script>
-    // Optional: Function to scroll to the about section
     function scrollToServices() {
       const aboutSection = document.querySelector('#services');
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
+    function handleKeyPress(event) {
+    if (event.key === 'Enter' || event.key === 'Space') {
+        scrollToServices();
+        event.preventDefault(); 
+    }
+}
   </script>
 
 
 <section class="background flex-column">
     <h1 class="site-title">
-        Paradis <br> Tutoring
+        Paradis <span>Tutoring</span>
     </h1>
 
     <div class="flex-column sub-header">
@@ -17,10 +22,11 @@
             Let your potential unfold
         </h3>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis et voluptate, labore nesciunt suscipit enim id voluptatum? Ipsum, veritatis distinctio!
+            At Paradis Tutoring, we're committed to helping you excel in all aspects of English and communication. Led by Mr. Paradis, a seasoned educator with over 10 years of experience across multiple continents, our tutoring services are designed to boost your abilities and confidence in professional writing, SAT preparation, literary analysis, and public speaking.
         </p>
     </div>
-    <button on:click={scrollToServices} class="flashing-button">My Services</button>
+    <button on:click={scrollToServices}     on:keypress={handleKeyPress}
+     class="flashing-button" aria-label="Learn more about my tutoring services">My Services</button>
 </section>
 
   
@@ -32,7 +38,9 @@
         background-repeat: no-repeat;
         height: 100vh;
         padding: 20px;
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .flex-column {
         display: flex;
@@ -40,11 +48,14 @@
         align-items: start;
     }
     .site-title {
-        margin-top: 20vh !important;
         color: white;
         font-family: 'Cormorant+Infant', serif;
         font-size: 10rem;
+        margin: 0px !important
 
+    }
+    .site-title span {
+        display: block;
     }
     .sub-header {
         color: white;
@@ -65,7 +76,7 @@
     border-radius: 5px;
     animation: flashAnimation 2s infinite;
     animation-timing-function: ease-in-out;
-    margin: auto;
+    margin: 12px auto;
   }
 
   @keyframes flashAnimation {

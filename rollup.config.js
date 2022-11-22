@@ -31,17 +31,16 @@ export default {
     }),
     commonjs(),
     url({
-      // include jpg
       include: ["**/*.jpg", "**/*.jpeg", "**/*.png", "**/*.svg"],
       limit: Infinity,
     }),
 
     !production &&
       serve({
-        contentBase: "public", // The folder to serve files from
-        historyApiFallback: true, // Respond to all server requests with `index.html`, useful for Single Page Applications
-        port: 5000, // The port to run the server on
-        open: true, // Optional: Open the browser automatically
+        contentBase: "public",
+        historyApiFallback: true,
+        port: 5000,
+        open: true,
       }),
     !production && livereload("public"),
 

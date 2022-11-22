@@ -15,7 +15,6 @@ import Header from "./components/Header.svelte";
     }
     setContext('clickedTopic', { clickedTopic, updateClickedTopic });
     setContext('services', services);
-    $: console.log(clickedTopic);
 
   </script>
   
