@@ -11,3 +11,12 @@ body {
   padding: 0;
   font-family: Arial, sans-serif; /* Example font */
 }
+.section-title {
+  text-align: end;
+  color: white;
+  padding-top: 100px;
+  margin-right: 60px;
+  font-family: "Cormorant+Infant", serif;
+  font-size: 6rem;
+  margin-top: 0px !important;
+}

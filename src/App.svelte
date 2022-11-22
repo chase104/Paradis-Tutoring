@@ -1,5 +1,6 @@
 <script>
-  import Header from "./components/Header.svelte";
+  import Contact from "./components/Contact.svelte";
+import Header from "./components/Header.svelte";
   import Services from "./components/Services.svelte";
   import { setContext } from 'svelte';
 
@@ -15,6 +16,7 @@
   <main>
     <Header />
     <Services />
+    <Contact />
   </main>
   
   <style>

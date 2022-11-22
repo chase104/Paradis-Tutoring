@@ -29,15 +29,7 @@
         flex-direction: column;
         
     }
-    #services h2 {
-        text-align: end;
-        color: white;
-        padding-top: 100px;
-        margin-right: 60px;
-        font-family: 'Cormorant+Infant', serif;
-        font-size: 6rem;
-        margin-top: 0px !important;
-    }
+
 
     .lists-container {
         display: flex;
@@ -78,7 +70,7 @@
     }
 </style>
 <section id="services">
-    <h2>Services</h2>
+    <h2 class="section-title ">Services</h2>
     <div class="lists-container">
 
     {#each services as service}
