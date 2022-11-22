@@ -2,19 +2,48 @@
 <script>
     import { getContext } from 'svelte';
     const services = getContext('services');
+    import {clickedTopic} from '../store.js';
+    $: console.log(clickedTopic);
+    function scrollToContact() {
+      const aboutSection = document.querySelector('#contact');
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+    let handleTypeClick = (type) => {
+        console.log("setting type");
+        clickedTopic.set(type);
+    }
+
 </script>
 
 
+
+<section id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="lists-container">
+
+    {#each services as service}
+        <div class="individual-list" on:click={() => scrollToContact()}>
+            <h3>{service.type}</h3>
+            <ul class="services-list">
+                {#each service.types as type}
+                    <li on:click={() => handleTypeClick(type)}>{type}</li>
+                {/each}
+            </ul>
+
+        </div>
+    {/each}
+</div>
+
+</section>
+
 <style>
     #services {
-        /* background-color: #2B4257; */
         background: linear-gradient(
       to bottom right,
       rgba(43, 66, 87, 0.85),
       rgba(43, 66, 87, 0.85)
     ),
-    url("../assets/scholastic_background.png") center center no-repeat;
-        /* background-image: url("../assets/scholastic_background.png"); */
+    url("../assets/scholastic_background.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -69,21 +98,3 @@
     
     }
 </style>
-<section id="services">
-    <h2 class="section-title ">Services</h2>
-    <div class="lists-container">
-
-    {#each services as service}
-        <div class="individual-list">
-            <h3>{service.type}</h3>
-            <ul class="services-list">
-                {#each service.types as type}
-                    <li>{type}</li>
-                {/each}
-            </ul>
-
-        </div>
-    {/each}
-</div>
-
-</section>

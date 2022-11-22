@@ -9,8 +9,14 @@ import Header from "./components/Header.svelte";
         { type: "Exam Preparation", types: ["IELTS", "TOEFL", "TOEIC", "Cambridge English Exams", "SAT"] },
         { type: "Academic Tutoring", types: ["Mathematics", "Science", "History", "Geography", "Literature", "Writing", "Research", "Study Skills"] },
     ];
-
+    let clickedTopic = "ART";
+    let updateClickedTopic = (topic) => {
+        clickedTopic = topic;
+    }
+    setContext('clickedTopic', { clickedTopic, updateClickedTopic });
     setContext('services', services);
+    $: console.log(clickedTopic);
+
   </script>
   
   <main>

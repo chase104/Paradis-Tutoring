@@ -20,3 +20,6 @@ body {
   font-size: 6rem;
   margin-top: 0px !important;
 }
+* {
+  box-sizing: border-box;
+}

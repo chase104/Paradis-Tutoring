@@ -5,6 +5,24 @@
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
+
+
+<section class="background flex-column">
+    <h1 class="site-title">
+        Paradis <br> Tutoring
+    </h1>
+
+    <div class="flex-column sub-header">
+        <h3>
+            Let your potential unfold
+        </h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis et voluptate, labore nesciunt suscipit enim id voluptatum? Ipsum, veritatis distinctio!
+        </p>
+    </div>
+    <button on:click={scrollToServices} class="flashing-button">My Services</button>
+</section>
+
   
 <style>
     .background {
@@ -37,7 +55,7 @@
         letter-spacing: 1px;
     }
     .flashing-button {
-    background-color: white; /* Green background */
+    background-color: white;
     color: black;
     padding: 26px 30px;
     font-size: 20px;
@@ -55,19 +73,3 @@
     50% { opacity: 0.5; }
   }
 </style>
-
-<section class="background flex-column">
-    <h1 class="site-title">
-        Paradis <br> Tutoring
-    </h1>
-
-    <div class="flex-column sub-header">
-        <h3>
-            Let your potential unfold
-        </h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis et voluptate, labore nesciunt suscipit enim id voluptatum? Ipsum, veritatis distinctio!
-        </p>
-    </div>
-    <button on:click={scrollToServices} class="flashing-button">My Services</button>
-</section>
