@@ -37,18 +37,21 @@
         letter-spacing: 1px;
     }
     .flashing-button {
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    padding: 16px 20px;
+    background-color: white; /* Green background */
+    color: black;
+    padding: 26px 30px;
+    font-size: 20px;
     border: none;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
     animation: flashAnimation 2s infinite;
+    animation-timing-function: ease-in-out;
     margin: auto;
   }
 
   @keyframes flashAnimation {
-    0%, 100% { opacity: 1; }
+    0%, 100% { opacity: .9; }
     50% { opacity: 0.5; }
   }
 </style>

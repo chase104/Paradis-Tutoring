@@ -1,22 +1,23 @@
 
 <script>
-    let services = [
-        {type: "English",  types: [
-            "Beginner Classes", "Intermediate Classes", "Advanced Classes", "Business English", "Conversation Classes",
-        ]},
-        {type: "Exam Preparation",types: [
-            "IELTS", "TOEFL", "TOEIC", "Cambridge English Exams", "SAT", 
-        ]},
-        {type: "Academic Tutoring", types: [
-            "Mathematics", "Science", "History", "Geography", "Literature", "Writing", "Research", "Study Skills",
-        ]},
-    ]
+    import { getContext } from 'svelte';
+    const services = getContext('services');
 </script>
 
 
 <style>
     #services {
-        background-color: #2B4257;
+        /* background-color: #2B4257; */
+        background: linear-gradient(
+      to bottom right,
+      rgba(43, 66, 87, 0.85),
+      rgba(43, 66, 87, 0.85)
+    ),
+    url("../assets/scholastic_background.png") center center no-repeat;
+        /* background-image: url("../assets/scholastic_background.png"); */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         color: white;
         min-height: 100vh;
     }

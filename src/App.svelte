@@ -1,7 +1,15 @@
 <script>
   import Header from "./components/Header.svelte";
   import Services from "./components/Services.svelte";
+  import { setContext } from 'svelte';
 
+    let services = [
+        { type: "English", types: ["Beginner Classes", "Intermediate Classes", "Advanced Classes", "Business English", "Conversation Classes"] },
+        { type: "Exam Preparation", types: ["IELTS", "TOEFL", "TOEIC", "Cambridge English Exams", "SAT"] },
+        { type: "Academic Tutoring", types: ["Mathematics", "Science", "History", "Geography", "Literature", "Writing", "Research", "Study Skills"] },
+    ];
+
+    setContext('services', services);
   </script>
   
   <main>
