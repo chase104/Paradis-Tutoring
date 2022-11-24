@@ -25,9 +25,7 @@ pids
 coverage/
 *.lcov
 
-# Build directories
-build/
-dist/
+
 
 # Temp files
 tmp
