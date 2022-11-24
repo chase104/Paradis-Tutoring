@@ -1,40 +1,45 @@
-
 <script>
-        import { getContext } from 'svelte';
-    const services = getContext('services');
-    import {clickedTopic} from '../store.js';
-    let topics = [];
+  import { getContext } from 'svelte';
+  import { clickedTopic } from '../store.js';
 
-    services.forEach(service => {
-        topics = topics.concat(service.types);
-    });
-    let name = '';
-    let email = '';
-    let topic = '';
-    let message = '';
-    let formSubmitted = false;
-    $: {
-        if ((!topic && $clickedTopic) ) {
-            topic = $clickedTopic;
-        }
-    }
-    clickedTopic.subscribe(value => {
-        if (value.length) {
-        topic = value;
-        }
-    })
+  const services = getContext('services');
+  let topics = [];
 
-    function handleSubmit() {
-      if (name && email && topic && message) {
-        formSubmitted = true;
-      } else {
-        alert('Please fill in all the required fields.');
+  services.forEach(service => {
+      topics = topics.concat(service.types);
+  });
+
+  let name = '';
+  let email = '';
+  let topic = '';
+  let message = '';
+  // we need to use localStorage here because formspree redirects us
+  let formSubmitted = localStorage.getItem("formSubmitted") === 'true';
+
+  clickedTopic.subscribe(value => {
+      if (value) {
+          topic = value;
       }
-    }
-    setTimeout(() => {
-      formSubmitted = true
-    }, 1000)
-  </script>
+  });
+
+  $: topic = $clickedTopic || topic;
+
+  $: if (formSubmitted) {
+      localStorage.setItem("formSubmitted", 'true');
+      setTimeout(() => {
+          formSubmitted = false;
+          localStorage.removeItem("formSubmitted");
+      }, 10000);
+  }
+
+  function handleSubmit() {
+      if (name && email && topic && message) {
+          formSubmitted = true; 
+      } else {
+          alert('Please fill in all the required fields.');
+      }
+  }
+</script>
 
   <section id="contact">
     <h2 class="section-title contact-title">Contact</h2>

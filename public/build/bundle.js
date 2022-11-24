@@ -491,7 +491,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (62:10) {#each service.types as type}
+    // (67:10) {#each service.types as type}
     function create_each_block_1$1(ctx) {
     	let option;
     	let t_value = /*type*/ ctx[16] + "";
@@ -503,7 +503,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = /*type*/ ctx[16];
     			option.value = option.__value;
-    			add_location(option, file$3, 62, 12, 1888);
+    			add_location(option, file$3, 67, 12, 2052);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -519,14 +519,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1$1.name,
     		type: "each",
-    		source: "(62:10) {#each service.types as type}",
+    		source: "(67:10) {#each service.types as type}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (60:8) {#each services as service}
+    // (65:8) {#each services as service}
     function create_each_block$1(ctx) {
     	let optgroup;
     	let each_value_1 = /*service*/ ctx[13].types;
@@ -546,7 +546,7 @@ var app = (function () {
     			}
 
     			attr_dev(optgroup, "label", /*service*/ ctx[13].type);
-    			add_location(optgroup, file$3, 60, 8, 1802);
+    			add_location(optgroup, file$3, 65, 8, 1966);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, optgroup, anchor);
@@ -590,7 +590,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(60:8) {#each services as service}",
+    		source: "(65:8) {#each services as service}",
     		ctx
     	});
 
@@ -680,57 +680,57 @@ var app = (function () {
     			button = element("button");
     			button.textContent = "Submit";
     			attr_dev(h2, "class", "section-title contact-title svelte-27sw9m");
-    			add_location(h2, file$3, 39, 4, 916);
+    			add_location(h2, file$3, 44, 4, 1080);
     			attr_dev(p, "class", "success-msg svelte-27sw9m");
-    			toggle_class(p, "display-success", /*formSubmitted*/ ctx[4]);
-    			add_location(p, file$3, 43, 8, 1118);
+    			toggle_class(p, "display-success", /*formSubmitted*/ ctx[1]);
+    			add_location(p, file$3, 48, 8, 1282);
     			attr_dev(label0, "for", "name");
-    			add_location(label0, file$3, 46, 10, 1298);
+    			add_location(label0, file$3, 51, 10, 1462);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "name", "name");
     			attr_dev(input0, "class", "svelte-27sw9m");
-    			add_location(input0, file$3, 47, 8, 1339);
+    			add_location(input0, file$3, 52, 8, 1503);
     			attr_dev(div0, "class", "label-input-container svelte-27sw9m");
-    			add_location(div0, file$3, 44, 8, 1249);
+    			add_location(div0, file$3, 49, 8, 1413);
     			attr_dev(label1, "for", "email");
-    			add_location(label1, file$3, 50, 6, 1459);
+    			add_location(label1, file$3, 55, 6, 1623);
     			attr_dev(input1, "type", "email");
     			attr_dev(input1, "name", "email");
     			attr_dev(input1, "class", "svelte-27sw9m");
-    			add_location(input1, file$3, 51, 6, 1499);
+    			add_location(input1, file$3, 56, 6, 1663);
     			attr_dev(div1, "class", "label-input-container svelte-27sw9m");
-    			add_location(div1, file$3, 49, 8, 1416);
+    			add_location(div1, file$3, 54, 8, 1580);
     			attr_dev(label2, "for", "topic");
-    			add_location(label2, file$3, 55, 6, 1613);
+    			add_location(label2, file$3, 60, 6, 1777);
     			option.__value = "";
     			option.value = option.__value;
-    			add_location(option, file$3, 58, 8, 1710);
+    			add_location(option, file$3, 63, 8, 1874);
     			attr_dev(select, "name", "topic");
     			attr_dev(select, "class", "svelte-27sw9m");
     			if (/*topic*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[10].call(select));
-    			add_location(select, file$3, 57, 6, 1660);
+    			add_location(select, file$3, 62, 6, 1824);
     			attr_dev(div2, "class", "label-input-container svelte-27sw9m");
-    			add_location(div2, file$3, 53, 2, 1568);
+    			add_location(div2, file$3, 58, 2, 1732);
     			attr_dev(label3, "for", "message");
-    			add_location(label3, file$3, 71, 6, 2074);
+    			add_location(label3, file$3, 76, 6, 2238);
     			attr_dev(textarea, "class", "message svelte-27sw9m");
     			attr_dev(textarea, "name", "message");
     			attr_dev(textarea, "placeholder", "Tell me a bit about what you're looking for");
     			attr_dev(textarea, "rows", "5");
-    			add_location(textarea, file$3, 73, 6, 2120);
+    			add_location(textarea, file$3, 78, 6, 2284);
     			attr_dev(div3, "class", "label-input-container svelte-27sw9m");
-    			add_location(div3, file$3, 69, 6, 2029);
+    			add_location(div3, file$3, 74, 6, 2193);
     			attr_dev(button, "type", "submit");
     			attr_dev(button, "class", "svelte-27sw9m");
-    			add_location(button, file$3, 75, 6, 2284);
+    			add_location(button, file$3, 80, 6, 2448);
     			attr_dev(form, "action", "https://formspree.io/f/xqkrwajl");
     			attr_dev(form, "method", "POST");
     			attr_dev(form, "class", "svelte-27sw9m");
-    			toggle_class(form, "padding-top-success", /*formSubmitted*/ ctx[4]);
-    			add_location(form, file$3, 42, 4, 978);
+    			toggle_class(form, "padding-top-success", /*formSubmitted*/ ctx[1]);
+    			add_location(form, file$3, 47, 4, 1142);
     			attr_dev(section, "id", "contact");
     			attr_dev(section, "class", "svelte-27sw9m");
-    			add_location(section, file$3, 38, 2, 888);
+    			add_location(section, file$3, 43, 2, 1052);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -746,13 +746,13 @@ var app = (function () {
     			append_dev(div0, label0);
     			append_dev(div0, t5);
     			append_dev(div0, input0);
-    			set_input_value(input0, /*name*/ ctx[1]);
+    			set_input_value(input0, /*name*/ ctx[2]);
     			append_dev(form, t6);
     			append_dev(form, div1);
     			append_dev(div1, label1);
     			append_dev(div1, t8);
     			append_dev(div1, input1);
-    			set_input_value(input1, /*email*/ ctx[2]);
+    			set_input_value(input1, /*email*/ ctx[3]);
     			append_dev(form, t9);
     			append_dev(form, div2);
     			append_dev(div2, label2);
@@ -770,7 +770,7 @@ var app = (function () {
     			append_dev(div3, label3);
     			append_dev(div3, t15);
     			append_dev(div3, textarea);
-    			set_input_value(textarea, /*message*/ ctx[3]);
+    			set_input_value(textarea, /*message*/ ctx[4]);
     			append_dev(form, t16);
     			append_dev(form, button);
 
@@ -787,16 +787,16 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*formSubmitted*/ 16) {
-    				toggle_class(p, "display-success", /*formSubmitted*/ ctx[4]);
+    			if (dirty & /*formSubmitted*/ 2) {
+    				toggle_class(p, "display-success", /*formSubmitted*/ ctx[1]);
     			}
 
-    			if (dirty & /*name*/ 2 && input0.value !== /*name*/ ctx[1]) {
-    				set_input_value(input0, /*name*/ ctx[1]);
+    			if (dirty & /*name*/ 4 && input0.value !== /*name*/ ctx[2]) {
+    				set_input_value(input0, /*name*/ ctx[2]);
     			}
 
-    			if (dirty & /*email*/ 4 && input1.value !== /*email*/ ctx[2]) {
-    				set_input_value(input1, /*email*/ ctx[2]);
+    			if (dirty & /*email*/ 8 && input1.value !== /*email*/ ctx[3]) {
+    				set_input_value(input1, /*email*/ ctx[3]);
     			}
 
     			if (dirty & /*services*/ 32) {
@@ -827,12 +827,12 @@ var app = (function () {
     				select_option(select, /*topic*/ ctx[0]);
     			}
 
-    			if (dirty & /*message*/ 8) {
-    				set_input_value(textarea, /*message*/ ctx[3]);
+    			if (dirty & /*message*/ 16) {
+    				set_input_value(textarea, /*message*/ ctx[4]);
     			}
 
-    			if (dirty & /*formSubmitted*/ 16) {
-    				toggle_class(form, "padding-top-success", /*formSubmitted*/ ctx[4]);
+    			if (dirty & /*formSubmitted*/ 2) {
+    				toggle_class(form, "padding-top-success", /*formSubmitted*/ ctx[1]);
     			}
     		},
     		i: noop,
@@ -873,28 +873,23 @@ var app = (function () {
     	let email = '';
     	let topic = '';
     	let message = '';
-    	let formSubmitted = false;
+
+    	// we need to use localStorage here because formspree redirects us
+    	let formSubmitted = localStorage.getItem("formSubmitted") === 'true';
 
     	clickedTopic.subscribe(value => {
-    		if (value.length) {
+    		if (value) {
     			$$invalidate(0, topic = value);
     		}
     	});
 
     	function handleSubmit() {
     		if (name && email && topic && message) {
-    			$$invalidate(4, formSubmitted = true);
+    			$$invalidate(1, formSubmitted = true);
     		} else {
     			alert('Please fill in all the required fields.');
     		}
     	}
-
-    	setTimeout(
-    		() => {
-    			$$invalidate(4, formSubmitted = true);
-    		},
-    		1000
-    	);
 
     	const writable_props = [];
 
@@ -904,12 +899,12 @@ var app = (function () {
 
     	function input0_input_handler() {
     		name = this.value;
-    		$$invalidate(1, name);
+    		$$invalidate(2, name);
     	}
 
     	function input1_input_handler() {
     		email = this.value;
-    		$$invalidate(2, email);
+    		$$invalidate(3, email);
     	}
 
     	function select_change_handler() {
@@ -920,13 +915,13 @@ var app = (function () {
 
     	function textarea_input_handler() {
     		message = this.value;
-    		$$invalidate(3, message);
+    		$$invalidate(4, message);
     	}
 
     	$$self.$capture_state = () => ({
     		getContext,
-    		services,
     		clickedTopic,
+    		services,
     		topics,
     		name,
     		email,
@@ -939,11 +934,11 @@ var app = (function () {
 
     	$$self.$inject_state = $$props => {
     		if ('topics' in $$props) topics = $$props.topics;
-    		if ('name' in $$props) $$invalidate(1, name = $$props.name);
-    		if ('email' in $$props) $$invalidate(2, email = $$props.email);
+    		if ('name' in $$props) $$invalidate(2, name = $$props.name);
+    		if ('email' in $$props) $$invalidate(3, email = $$props.email);
     		if ('topic' in $$props) $$invalidate(0, topic = $$props.topic);
-    		if ('message' in $$props) $$invalidate(3, message = $$props.message);
-    		if ('formSubmitted' in $$props) $$invalidate(4, formSubmitted = $$props.formSubmitted);
+    		if ('message' in $$props) $$invalidate(4, message = $$props.message);
+    		if ('formSubmitted' in $$props) $$invalidate(1, formSubmitted = $$props.formSubmitted);
     	};
 
     	if ($$props && "$$inject" in $$props) {
@@ -951,21 +946,31 @@ var app = (function () {
     	}
 
     	$$self.$$.update = () => {
-    		if ($$self.$$.dirty & /*topic, $clickedTopic*/ 129) {
-    			{
-    				if (!topic && $clickedTopic) {
-    					$$invalidate(0, topic = $clickedTopic);
-    				}
+    		if ($$self.$$.dirty & /*$clickedTopic, topic*/ 129) {
+    			$$invalidate(0, topic = $clickedTopic || topic);
+    		}
+
+    		if ($$self.$$.dirty & /*formSubmitted*/ 2) {
+    			if (formSubmitted) {
+    				localStorage.setItem("formSubmitted", 'true');
+
+    				setTimeout(
+    					() => {
+    						$$invalidate(1, formSubmitted = false);
+    						localStorage.removeItem("formSubmitted");
+    					},
+    					10000
+    				);
     			}
     		}
     	};
 
     	return [
     		topic,
+    		formSubmitted,
     		name,
     		email,
     		message,
-    		formSubmitted,
     		services,
     		handleSubmit,
     		$clickedTopic,
