@@ -6,9 +6,14 @@ import Header from "./components/Header.svelte";
 
     let services = [
         { type: "English", types: ["Beginner Classes", "Intermediate Classes", "Advanced Classes", "Business English", "Conversation Classes"] },
-        { type: "Exam Preparation", types: ["IELTS", "TOEFL", "TOEIC", "Cambridge English Exams", "SAT"] },
-        { type: "Academic Tutoring", types: ["Mathematics", "Science", "History", "Geography", "Literature", "Writing", "Research", "Study Skills"] },
+        { type: "SAT Prep", types: ["Reading", "Writing", "Math"] },
+        { type: "Advanced Tutoring", types: ["Literary Analysis", "Professional Writing", "Public Speaking"] },
     ];
+    // let services = [
+    //     { type: "English", types: ["Beginner Classes", "Intermediate Classes", "Advanced Classes", "Business English", "Conversation Classes"] },
+    //     { type: "Exam Preparation", types: ["IELTS", "TOEFL", "TOEIC", "Cambridge English Exams", "SAT"] },
+    //     { type: "Academic Tutoring", types: ["Mathematics", "Science", "History", "Geography", "Literature", "Writing", "Research", "Study Skills"] },
+    // ];
     let clickedTopic = "ART";
     let updateClickedTopic = (topic) => {
         clickedTopic = topic;
@@ -17,7 +22,7 @@ import Header from "./components/Header.svelte";
     setContext('services', services);
 
   </script>
-  
+
   <main>
     <Header />
     <Services />
@@ -25,9 +30,7 @@ import Header from "./components/Header.svelte";
   </main>
   
   <style>
-    main {
 
-    }
     body {
       margin: 0;
       padding: 0;

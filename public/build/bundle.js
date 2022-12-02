@@ -1476,8 +1476,7 @@ var app = (function () {
     			create_component(services_1.$$.fragment);
     			t1 = space();
     			create_component(contact.$$.fragment);
-    			attr_dev(main, "class", "svelte-1d18ysu");
-    			add_location(main, file, 20, 2, 893);
+    			add_location(main, file, 25, 2, 1266);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1540,24 +1539,20 @@ var app = (function () {
     			]
     		},
     		{
-    			type: "Exam Preparation",
-    			types: ["IELTS", "TOEFL", "TOEIC", "Cambridge English Exams", "SAT"]
+    			type: "SAT Prep",
+    			types: ["Reading", "Writing", "Math"]
     		},
     		{
-    			type: "Academic Tutoring",
-    			types: [
-    				"Mathematics",
-    				"Science",
-    				"History",
-    				"Geography",
-    				"Literature",
-    				"Writing",
-    				"Research",
-    				"Study Skills"
-    			]
+    			type: "Advanced Tutoring",
+    			types: ["Literary Analysis", "Professional Writing", "Public Speaking"]
     		}
     	];
 
+    	// let services = [
+    	//     { type: "English", types: ["Beginner Classes", "Intermediate Classes", "Advanced Classes", "Business English", "Conversation Classes"] },
+    	//     { type: "Exam Preparation", types: ["IELTS", "TOEFL", "TOEIC", "Cambridge English Exams", "SAT"] },
+    	//     { type: "Academic Tutoring", types: ["Mathematics", "Science", "History", "Geography", "Literature", "Writing", "Research", "Study Skills"] },
+    	// ];
     	let clickedTopic = "ART";
 
     	let updateClickedTopic = topic => {
