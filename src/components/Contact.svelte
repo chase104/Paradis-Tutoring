@@ -140,7 +140,6 @@
       opacity: 0.8;
     }
     #contact {
-        height: 100vh;
             display: flex;
             justify-content: center;
             flex-direction: column;
