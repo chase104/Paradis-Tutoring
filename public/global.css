@@ -20,6 +20,23 @@ body {
   font-size: 6rem;
   margin-top: 0px !important;
 }
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 3rem !important;
+  }
+  .site-subtitle {
+    font-size: 1.5rem !important;
+  }
+  .lists-container {
+    flex-direction: column;
+  }
+  .section-title {
+    font-size: 3rem;
+  }
+  form {
+    width: 300px !important;
+  }
+}
 * {
   box-sizing: border-box;
 }

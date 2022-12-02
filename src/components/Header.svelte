@@ -18,7 +18,7 @@
     </h1>
 
     <div class="flex-column sub-header">
-        <h3>
+        <h3 class="site-subtitle">
             Let your potential unfold
         </h3>
         <p>

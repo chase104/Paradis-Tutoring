@@ -1035,14 +1035,14 @@ var app = (function () {
     			add_location(span, file$2, 16, 16, 451);
     			attr_dev(h1, "class", "site-title svelte-odssj1");
     			add_location(h1, file$2, 15, 4, 410);
-    			attr_dev(h3, "class", "svelte-odssj1");
+    			attr_dev(h3, "class", "site-subtitle svelte-odssj1");
     			add_location(h3, file$2, 20, 8, 537);
-    			add_location(p, file$2, 23, 8, 605);
+    			add_location(p, file$2, 23, 8, 627);
     			attr_dev(div, "class", "flex-column sub-header svelte-odssj1");
     			add_location(div, file$2, 19, 4, 491);
     			attr_dev(button, "class", "flashing-button svelte-odssj1");
     			attr_dev(button, "aria-label", "Learn more about my tutoring services");
-    			add_location(button, file$2, 27, 4, 1013);
+    			add_location(button, file$2, 27, 4, 1035);
     			attr_dev(section, "class", "background flex-column svelte-odssj1");
     			add_location(section, file$2, 14, 0, 364);
     		},
