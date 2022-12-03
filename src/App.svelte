@@ -1,4 +1,5 @@
 <script>
+  import About from "./components/About.svelte";
   import Contact from "./components/Contact.svelte";
 import Header from "./components/Header.svelte";
   import Services from "./components/Services.svelte";
@@ -26,7 +27,9 @@ import Header from "./components/Header.svelte";
   <main>
     <Header />
     <Services />
+    <About />
     <Contact />
+    <!-- reviews -->
   </main>
   
   <style>

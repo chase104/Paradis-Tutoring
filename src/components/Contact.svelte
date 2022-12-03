@@ -85,12 +85,12 @@
 <style>
 
      #contact {
-        background: linear-gradient(
+      background: linear-gradient(
       to bottom right,
-      rgba(244, 244, 242, 0.9),
-      rgba(244, 244, 242, 0.9)
+      rgba(43, 66, 87, 0.85),
+      rgba(43, 66, 87, 0.85)
     ),
-    url("../assets/scholastic_dark.png") ;
+    url("../assets/scholastic_background.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
