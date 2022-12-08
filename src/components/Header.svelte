@@ -37,7 +37,7 @@
         background-position: center;
         background-repeat: no-repeat;
         height: 100vh;
-        padding: 20px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;

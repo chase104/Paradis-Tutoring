@@ -145,7 +145,7 @@
             flex-direction: column;
     }
     .contact-title {
-        color: black;
+        color: white;
         margin-bottom: 0px !important;
     }   
     .message{

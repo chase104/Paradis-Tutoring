@@ -483,21 +483,21 @@ var app = (function () {
     			h1.textContent = "About Me";
     			t2 = space();
     			p = element("p");
-    			p.textContent = "Welcome! I’m [Your Name], a passionate [Your Profession] with a deep interest in [Your Interests]. \r\n      With experience in [Your Experience], I love to [What You Love to Do]. Based in [Your Location], \r\n      I’m always looking for new challenges and opportunities to grow and make a significant impact. \r\n      Let’s connect and explore how we can create something amazing together!";
-    			if (!src_url_equal(img.src, img_src_value = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dprofile&psig=AOvVaw0PvRYD2wB6GAPhqOYQZC0c&ust=1713540849627000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCl4Z6LzIUDFQAAAAAdAAAAABAE")) attr_dev(img, "src", img_src_value);
+    			p.textContent = "Hello! I'm Matt Paradis, an experienced educator with a rich background in teaching English across various levels and a passion for helping students achieve their academic goals. Originally from the USA, I've embraced the adventure of living abroad, bringing a global perspective to my teaching methods.";
+    			if (!src_url_equal(img.src, img_src_value = "../assets/paradis_profile.jpg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "Your Name");
-    			attr_dev(img, "class", "profile-image svelte-1s2jrs1");
+    			attr_dev(img, "class", "profile-image svelte-1ykc249");
     			attr_dev(img, "applied", "");
     			attr_dev(img, "cubicout", "");
     			attr_dev(img, "easing", "");
     			toggle_class(img, "visible", /*isVisible*/ ctx[0]);
-    			add_location(img, file$4, 71, 4, 1705);
-    			attr_dev(h1, "class", "svelte-1s2jrs1");
-    			add_location(h1, file$4, 78, 4, 2153);
-    			attr_dev(p, "class", "svelte-1s2jrs1");
-    			add_location(p, file$4, 79, 4, 2176);
-    			attr_dev(div, "class", "about-me svelte-1s2jrs1");
-    			add_location(div, file$4, 70, 2, 1677);
+    			add_location(img, file$4, 83, 4, 1963);
+    			attr_dev(h1, "class", "section-title black-text svelte-1ykc249");
+    			add_location(h1, file$4, 90, 4, 2217);
+    			attr_dev(p, "class", "svelte-1ykc249");
+    			add_location(p, file$4, 91, 4, 2273);
+    			attr_dev(div, "class", "about-me svelte-1ykc249");
+    			add_location(div, file$4, 82, 2, 1935);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -554,7 +554,9 @@ var app = (function () {
 
     	onMount(() => {
     		const observer = new IntersectionObserver(([entry]) => {
-    				$$invalidate(0, isVisible = entry.isIntersecting);
+    				if (entry.isIntersecting && !isVisible) {
+    					$$invalidate(0, isVisible = true);
+    				}
     			},
     		{
     				threshold: 0.5, // Trigger when 50% of the element is in view
@@ -854,26 +856,26 @@ var app = (function () {
     			t16 = space();
     			button = element("button");
     			button.textContent = "Submit";
-    			attr_dev(h2, "class", "section-title contact-title svelte-lg011r");
+    			attr_dev(h2, "class", "section-title contact-title svelte-1wr26vx");
     			add_location(h2, file$3, 44, 4, 1080);
-    			attr_dev(p, "class", "success-msg svelte-lg011r");
+    			attr_dev(p, "class", "success-msg svelte-1wr26vx");
     			toggle_class(p, "display-success", /*formSubmitted*/ ctx[1]);
     			add_location(p, file$3, 48, 8, 1282);
     			attr_dev(label0, "for", "name");
     			add_location(label0, file$3, 51, 10, 1462);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "name", "name");
-    			attr_dev(input0, "class", "svelte-lg011r");
+    			attr_dev(input0, "class", "svelte-1wr26vx");
     			add_location(input0, file$3, 52, 8, 1503);
-    			attr_dev(div0, "class", "label-input-container svelte-lg011r");
+    			attr_dev(div0, "class", "label-input-container svelte-1wr26vx");
     			add_location(div0, file$3, 49, 8, 1413);
     			attr_dev(label1, "for", "email");
     			add_location(label1, file$3, 55, 6, 1623);
     			attr_dev(input1, "type", "email");
     			attr_dev(input1, "name", "email");
-    			attr_dev(input1, "class", "svelte-lg011r");
+    			attr_dev(input1, "class", "svelte-1wr26vx");
     			add_location(input1, file$3, 56, 6, 1663);
-    			attr_dev(div1, "class", "label-input-container svelte-lg011r");
+    			attr_dev(div1, "class", "label-input-container svelte-1wr26vx");
     			add_location(div1, file$3, 54, 8, 1580);
     			attr_dev(label2, "for", "topic");
     			add_location(label2, file$3, 60, 6, 1777);
@@ -881,30 +883,30 @@ var app = (function () {
     			option.value = option.__value;
     			add_location(option, file$3, 63, 8, 1874);
     			attr_dev(select, "name", "topic");
-    			attr_dev(select, "class", "svelte-lg011r");
+    			attr_dev(select, "class", "svelte-1wr26vx");
     			if (/*topic*/ ctx[0] === void 0) add_render_callback(() => /*select_change_handler*/ ctx[10].call(select));
     			add_location(select, file$3, 62, 6, 1824);
-    			attr_dev(div2, "class", "label-input-container svelte-lg011r");
+    			attr_dev(div2, "class", "label-input-container svelte-1wr26vx");
     			add_location(div2, file$3, 58, 2, 1732);
     			attr_dev(label3, "for", "message");
     			add_location(label3, file$3, 76, 6, 2238);
-    			attr_dev(textarea, "class", "message svelte-lg011r");
+    			attr_dev(textarea, "class", "message svelte-1wr26vx");
     			attr_dev(textarea, "name", "message");
     			attr_dev(textarea, "placeholder", "Tell me a bit about what you're looking for");
     			attr_dev(textarea, "rows", "5");
     			add_location(textarea, file$3, 78, 6, 2284);
-    			attr_dev(div3, "class", "label-input-container svelte-lg011r");
+    			attr_dev(div3, "class", "label-input-container svelte-1wr26vx");
     			add_location(div3, file$3, 74, 6, 2193);
     			attr_dev(button, "type", "submit");
-    			attr_dev(button, "class", "svelte-lg011r");
+    			attr_dev(button, "class", "svelte-1wr26vx");
     			add_location(button, file$3, 80, 6, 2448);
     			attr_dev(form, "action", "https://formspree.io/f/xqkrwajl");
     			attr_dev(form, "method", "POST");
-    			attr_dev(form, "class", "svelte-lg011r");
+    			attr_dev(form, "class", "svelte-1wr26vx");
     			toggle_class(form, "padding-top-success", /*formSubmitted*/ ctx[1]);
     			add_location(form, file$3, 47, 4, 1142);
     			attr_dev(section, "id", "contact");
-    			attr_dev(section, "class", "svelte-lg011r");
+    			attr_dev(section, "class", "svelte-1wr26vx");
     			add_location(section, file$3, 43, 2, 1052);
     		},
     		l: function claim(nodes) {
@@ -1206,19 +1208,19 @@ var app = (function () {
     			t6 = space();
     			button = element("button");
     			button.textContent = "My Services";
-    			attr_dev(span, "class", "svelte-odssj1");
+    			attr_dev(span, "class", "svelte-1blb4zj");
     			add_location(span, file$2, 16, 16, 451);
-    			attr_dev(h1, "class", "site-title svelte-odssj1");
+    			attr_dev(h1, "class", "site-title svelte-1blb4zj");
     			add_location(h1, file$2, 15, 4, 410);
-    			attr_dev(h3, "class", "site-subtitle svelte-odssj1");
+    			attr_dev(h3, "class", "site-subtitle svelte-1blb4zj");
     			add_location(h3, file$2, 20, 8, 537);
     			add_location(p, file$2, 23, 8, 627);
-    			attr_dev(div, "class", "flex-column sub-header svelte-odssj1");
+    			attr_dev(div, "class", "flex-column sub-header svelte-1blb4zj");
     			add_location(div, file$2, 19, 4, 491);
-    			attr_dev(button, "class", "flashing-button svelte-odssj1");
+    			attr_dev(button, "class", "flashing-button svelte-1blb4zj");
     			attr_dev(button, "aria-label", "Learn more about my tutoring services");
     			add_location(button, file$2, 27, 4, 1035);
-    			attr_dev(section, "class", "background flex-column svelte-odssj1");
+    			attr_dev(section, "class", "background flex-column svelte-1blb4zj");
     			add_location(section, file$2, 14, 0, 364);
     		},
     		l: function claim(nodes) {

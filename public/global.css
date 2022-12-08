@@ -16,7 +16,7 @@ body {
   padding-top: 100px;
   margin-right: 60px;
   font-family: "Cormorant+Infant", serif;
-  font-size: 6rem;
+  font-size: 6rem !important;
   margin-top: 0px !important;
 }
 @media (max-width: 768px) {

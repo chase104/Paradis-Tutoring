@@ -8,7 +8,10 @@
     onMount(() => {
       const observer = new IntersectionObserver(
         ([entry]) => {
-          isVisible = entry.isIntersecting;
+            if (entry.isIntersecting && !isVisible) {
+
+                isVisible = true;
+            }
         },
         {
           threshold: 0.5  // Trigger when 50% of the element is in view
@@ -48,12 +51,17 @@
     }
   
     .profile-image {
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
+      margin-left: 150vw;
       border-radius: 50%; /* Makes the image round */
       margin-bottom: 20px;
+      transition-duration: 1s;
     }
   
+    .visible {
+        margin-left: 0vw;
+    }
     h1 {
       margin: 0;
       font-size: 2.5rem;
@@ -66,19 +74,24 @@
       max-width: 600px;
       margin-top: 20px;
     }
+    .black-text {
+        color: black !important;
+        padding-top: 0px;
+    }
   </style>
   
   <div class="about-me">
     <img 
-      src="" 
+      src="../assets/paradis_profile.jpg" 
       alt="Your Name"
       class="profile-image"
       use:fly={{ y: 200, duration: 800, delay: 0, opacity: 0, easing: cubicOut }} Applied cubicOut easing
       class:visible={isVisible}
     >
-    <h1>About Me</h1>
+    <h1 class="section-title black-text">About Me</h1>
     <p>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus dolore praesentium dolores aliquam illo aspernatur beatae veniam distinctio dolorem quibusdam temporibus, nulla aliquid odio reiciendis cupiditate doloremque nobis consequatur.
+        Hello! I'm Matt Paradis, an experienced educator with a rich background in teaching English across various levels and a passion for helping students achieve their academic goals. Originally from the USA, I've embraced the adventure of living abroad, bringing a global perspective to my teaching methods.
+
     </p>
   </div>
   
