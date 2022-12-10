@@ -1,23 +1,16 @@
 <script>
-    function scrollToServices() {
-      const aboutSection = document.querySelector('#services');
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-    function handleKeyPress(event) {
-    if (event.key === 'Enter' || event.key === 'Space') {
-        scrollToServices();
-        event.preventDefault(); 
-    }
-}
+  import NextButton from "./NextButton.svelte";
+
+
   </script>
 
 
-<section class="background flex-column">
-    <h1 class="site-title">
-        Paradis <span>Tutoring</span>
+<section class="background page-padding header-container">
+    <h1 class="site-title flex-column-center">
+        Paradis Tutoring
     </h1>
 
-    <div class="flex-column sub-header">
+    <div class="flex-column-center sub-header">
         <h3 class="site-subtitle">
             Let your potential unfold
         </h3>
@@ -25,8 +18,7 @@
             At Paradis Tutoring, we're committed to helping you excel in all aspects of English and communication. Led by Mr. Paradis, a seasoned educator with over 10 years of experience across multiple continents, our tutoring services are designed to boost your abilities and confidence in professional writing, SAT preparation, literary analysis, and public speaking.
         </p>
     </div>
-    <button on:click={scrollToServices}     on:keypress={handleKeyPress}
-     class="flashing-button" aria-label="Learn more about my tutoring services">My Services</button>
+    <NextButton target="#services" />
 </section>
 
   
@@ -36,16 +28,12 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        height: 100vh;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        height: 105vh;
+        
     }
-    .flex-column {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
+    .header-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .site-title {
         color: white;
@@ -65,22 +53,6 @@
         font-size: 2rem;
         letter-spacing: 1px;
     }
-    .flashing-button {
-    background-color: white;
-    color: black;
-    padding: 26px 30px;
-    font-size: 20px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    animation: flashAnimation 2s infinite;
-    animation-timing-function: ease-in-out;
-    margin: 12px auto;
-  }
+  
 
-  @keyframes flashAnimation {
-    0%, 100% { opacity: .9; }
-    50% { opacity: 0.5; }
-  }
 </style>

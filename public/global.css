@@ -10,11 +10,20 @@ body {
   margin: 0;
   padding: 0;
 }
+.page-padding {
+  padding: 0 140px;
+}
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
 .section-title {
-  text-align: end;
+  text-align: center;
   color: white;
   padding-top: 100px;
-  margin-right: 60px;
   font-family: "Cormorant+Infant", serif;
   font-size: 6rem !important;
   margin-top: 0px !important;
@@ -46,18 +55,26 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .header-container {
+    grid-template-columns: 1fr !important;
+  }
+  .site-title {
+    grid-column: span 2 !important;
+  }
   .carousel-container {
     min-height: 300px !important;
-    width: 70vw !important;
   }
-
+  .page-padding {
+    padding: 0 20px !important;
+  }
   .site-title {
     font-size: 4rem !important;
   }
   .section-title {
     margin-right: 0px !important;
   }
-  .individual-list h3 {
+  .individual-list,
+  .card-back h3 {
     display: flex;
     justify-content: center;
   }
@@ -66,9 +83,16 @@ body {
   }
   .lists-container {
     flex-direction: column;
+    gap: 16px;
+    margin-top: 20px !important;
+    margin-bottom: 60px !important;
   }
   .section-title {
     font-size: 3rem;
+    margin-bottom: 16px;
+  }
+  #contact form {
+    margin-top: 12px !important;
   }
   form {
     width: 300px !important;

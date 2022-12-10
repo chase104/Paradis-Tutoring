@@ -74,7 +74,7 @@ console.log(visibleReviews);
     }
   </script>
   
-  <div class="carousel-container">
+  <div class="carousel-container page-padding">
     <button on:click={() => handleNav('prev')}>◀</button>
     <div class="review-carousel">
       {#each reviews.slice(currentIndex, currentIndex + visibleReviews) as review (review.title)}
@@ -95,7 +95,6 @@ console.log(visibleReviews);
   <style>
     .carousel-container {
       display: flex;
-      width: 70vw;
       align-items: center;
       justify-content: center;
       overflow: hidden;

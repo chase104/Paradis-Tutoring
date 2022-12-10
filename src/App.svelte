@@ -1,6 +1,7 @@
 <script>
   import About from "./components/About.svelte";
   import Contact from "./components/Contact.svelte";
+  import Footer from "./components/Footer.svelte";
 import Header from "./components/Header.svelte";
   import ReviewForm from "./components/ReviewForm.svelte";
   import Reviews from "./components/Reviews.svelte";
@@ -8,15 +9,11 @@ import Header from "./components/Header.svelte";
   import { setContext } from 'svelte';
 
     let services = [
-        { type: "English", types: ["Beginner Classes", "Intermediate Classes", "Advanced Classes", "Business English", "Conversation Classes"] },
-        { type: "SAT Prep", types: ["Reading", "Writing", "Math"] },
-        { type: "Advanced Tutoring", types: ["Literary Analysis", "Professional Writing", "Public Speaking"] },
+        { type: "English", description: "Offering personalized English language tutoring tailored to every learning stage—from beginners eager to lay a strong foundation, to advanced learners looking to refine their fluency. Courses are designed to suit needs in mastering Business English or improving conversational skills.", types: ["Beginner Classes", "Intermediate Classes", "Advanced Classes", "Business English", "Conversation Classes"] },
+        { type: "SAT Prep", description: "Provides comprehensive preparation covering all sections of the SAT: Reading, Writing, and Math. The approach combines strategic review with practical test-taking strategies, ensuring full preparation on exam day.", types: ["Reading", "Writing", "Math"] },
+        { type: "Advanced Tutoring", description: "Advanced tutoring in Literary Analysis, Professional Writing, and Public Speaking. Whether dissecting complex texts, crafting written communications, or delivering speeches, guidance is designed to elevate skills and confidence.", types: ["Literary Analysis", "Professional Writing", "Public Speaking"] },
     ];
-    // let services = [
-    //     { type: "English", types: ["Beginner Classes", "Intermediate Classes", "Advanced Classes", "Business English", "Conversation Classes"] },
-    //     { type: "Exam Preparation", types: ["IELTS", "TOEFL", "TOEIC", "Cambridge English Exams", "SAT"] },
-    //     { type: "Academic Tutoring", types: ["Mathematics", "Science", "History", "Geography", "Literature", "Writing", "Research", "Study Skills"] },
-    // ];
+
     let clickedTopic = "ART";
     let updateClickedTopic = (topic) => {
         clickedTopic = topic;
@@ -32,7 +29,7 @@ import Header from "./components/Header.svelte";
     <About />
     <Contact />
     <Reviews />
-    <ReviewForm />
+    <Footer />
   </main>
   
   <style>

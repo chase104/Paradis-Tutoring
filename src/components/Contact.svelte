@@ -41,8 +41,8 @@
   }
 </script>
 
-  <section id="contact">
-    <h2 class="section-title contact-title">Contact</h2>
+  <section id="contact" class="page-padding">
+    <h2 class="section-title contact-title">Book a Consultation</h2>
 
 
     <form class:padding-top-success={formSubmitted}  action="https://formspree.io/f/xqkrwajl"  method="POST" on:submit={handleSubmit}>
@@ -95,7 +95,7 @@
         background-position: center;
         background-repeat: no-repeat;
         color: white;
-        min-height: 100vh;
+        min-height: 105vh;
     }
     form {
       background-color: white;
