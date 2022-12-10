@@ -19,6 +19,26 @@ body {
   font-size: 6rem !important;
   margin-top: 0px !important;
 }
+.padding-top-success {
+  padding-top: 100px !important;
+}
+
+.success-msg {
+  position: absolute;
+  transform: translateX(-100vw);
+  top: 20px;
+  margin: 0px 20px;
+  right: 0;
+  left: 0;
+  color: black;
+  border: 3px solid #4caf50;
+  padding: 8px;
+  background-color: white;
+  transition: transform 0.75s;
+}
+.display-success {
+  transform: translateX(0);
+}
 @media (max-width: 768px) {
   #services,
   #contact {

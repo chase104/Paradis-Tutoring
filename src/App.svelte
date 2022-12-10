@@ -2,6 +2,8 @@
   import About from "./components/About.svelte";
   import Contact from "./components/Contact.svelte";
 import Header from "./components/Header.svelte";
+  import ReviewForm from "./components/ReviewForm.svelte";
+  import Reviews from "./components/Reviews.svelte";
   import Services from "./components/Services.svelte";
   import { setContext } from 'svelte';
 
@@ -29,7 +31,8 @@ import Header from "./components/Header.svelte";
     <Services />
     <About />
     <Contact />
-    <!-- reviews -->
+    <Reviews />
+    <ReviewForm />
   </main>
   
   <style>

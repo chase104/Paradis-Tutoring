@@ -108,24 +108,8 @@
       margin: 100px auto;
       transition: 0.75s;
     }
-    .success-msg {
-        position: absolute;
-        transform: translateX(-100vw);
-        top: 20px;
-        margin: 0px 20px;
-        right: 0;
-        left: 0;
-        color: black;
-        border: 3px solid #4CAF50;
-        padding: 8px;   background-color: white;
-        transition: transform 0.75s;
-    }
-    .display-success {
-        transform: translateX(0);
-    }
-    .padding-top-success{
-      padding-top: 100px;
-    }
+
+
     input, select, textarea, button {
       padding: 8px;
       border: 1px solid #ccc;

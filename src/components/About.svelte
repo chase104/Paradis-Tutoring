@@ -94,6 +94,8 @@
   
     p {
       font-size: 1.2rem;
+      margin-left: auto;
+    margin-right: auto;
       text-align: center;
       max-width: 600px;
       margin-top: 20px;
